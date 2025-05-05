@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="main w-screen min-h-screen bg-zinc-900 p-10">
+        <a class="text-blue-500 hover:text-blue-400 mb-4 inline-block" href="/">← Go back to Home</a>
+        <form action="/update" method="post" class="flex flex-col">
+            <input type="hidden" name="filename" value="<%= filename %>">
+            <textarea name="content" class="w-full bg-zinc-800 text-white rounded-md p-4 mb-4"><%= content %></textarea>
+            <input type="submit" value="Update Task" class="w-full h-10 bg-blue-500 text-white rounded-md p-2 pointer">
+        </form>
+    </div>
+</body>
+</html> 
